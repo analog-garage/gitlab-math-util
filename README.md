@@ -14,7 +14,7 @@ Unfortunately, this is an idiosyncratic syntax that is not yet supported by any 
 
 However, editing tools that are based all or in part on JavaScript may
 be able to handle math rendering the same way that GitLab does by
-using the [KaTeX][katex] JavaScript math rendering library, which supports
+using the [KaTeX](https://github.com/Khan/KaTeX) JavaScript math rendering library, which supports
 both server-side and in-browser rendering of math. There is an associated
 auto-rendering extension script that can search for unrendered math markup
 in a DOM and replace it with rendered versions. With a little extra bit of
@@ -22,14 +22,14 @@ JavaScript provided in this project it is possible to support GitLab syntax.
 
 ## LightPaper support
 
-[LightPaper][lightpaper] is an inexpensive (but not free) Markdown editor
+[LightPaper](http://lightpaper.42squares.in/) is an inexpensive (but not free) Markdown editor
 for Mac OS X 10.10 or higher. While it does not natively support GitLab 
 syntax, it allows you to specify CSS files and JavaScript scripts to be automatically be loaded for all documents, and this can be used to install
 code to render GitLab math in place.
 
 Here is what you need to do:
 
-1. Download KaTeX from [here][katex-download] and install it somewhere on your machine. (Choose tar.gz or zip file)
+1. Download KaTeX from [here](https://github.com/khan/katex/releases) and install it somewhere on your machine. (Choose tar.gz or zip file)
 2. Download [gitlab-katex.js](./gitlab-katex.js) from this project and install somewhere. Or you could simply just clone this repository.
 3. In Preview tab of LightPaper preferences make sure that `Enable Math Rendering (powered by MathJax)` is turned off. We will be using KaTeX instead.
 4. In Script Assets tab of LightPaper preferences, add the following entries:
@@ -43,8 +43,3 @@ Here is what you need to do:
 
 KaTeX is not a complete implementation of LaTeX math, so you may want to occasionally update KaTeX to get the latest updates.
 
-[]: # (hidden references)
-[gitlab-math]: https://docs.gitlab.com/ee/user/markdown.html#math
-[katex]: https://github.com/Khan/KaTeX
-[katex-download]: https://github.com/khan/katex/releases
-[lightpaper]: http://lightpaper.42squares.in/
